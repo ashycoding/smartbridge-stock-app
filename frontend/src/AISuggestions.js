@@ -10,7 +10,7 @@ function AISuggestions() {
     const fetchSuggestions = async () => {
       try {
         const res = await axios.get(
-          "https://smartbridge-backend-pcfd.onrender.com/api/ai/suggestions",
+          "https://smartbridge-stock-app-backend.onrender.com/api/ai/suggestions",
           {
             headers: {
               Authorization: `Bearer ${token}`,

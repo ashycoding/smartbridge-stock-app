@@ -16,7 +16,7 @@ function Login() {
     setLoading(true);
     try {
       const res = await axios.post(
-        "https://smartbridge-backend-pcfd.onrender.com/api/users/login",
+        "https://smartbridge-stock-app-backend.onrender.com/api/users/login",
         { email, password }
       );
       localStorage.setItem("token", res.data.token);

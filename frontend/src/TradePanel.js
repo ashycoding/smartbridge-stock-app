@@ -22,21 +22,21 @@ function TradePanel() {
   }, []);
 
   const fetchStocks = async () => {
-    const res = await axios.get("https://smartbridge-backend-pcfd.onrender.com/api/stocks", {
+    const res = await axios.get("https://smartbridge-stock-app-backend.onrender.com/api/stocks", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setStocks(res.data);
   };
 
   const fetchUser = async () => {
-    const res = await axios.get("https://smartbridge-backend-pcfd.onrender.com/api/users/current", {
+    const res = await axios.get("https://smartbridge-stock-app-backend.onrender.com/api/users/current", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setBalance(res.data.balance);
   };
 
   const fetchPortfolio = async () => {
-    const res = await axios.get("https://smartbridge-backend-pcfd.onrender.com/api/portfolio", {
+    const res = await axios.get("https://smartbridge-stock-app-backend.onrender.com/api/portfolio", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setPortfolio(res.data || []);
@@ -76,7 +76,7 @@ function TradePanel() {
 
     try {
       const response = await axios.post(
-        `https://smartbridge-backend-pcfd.onrender.com/api/trade/${type}`,
+        `https://smartbridge-stock-app-backend.onrender.com/api/trade/${type}`,
         { stockId: selectedStock._id, quantity: qty },
         { headers: { Authorization: `Bearer ${token}` } }
       );

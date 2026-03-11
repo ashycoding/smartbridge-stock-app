@@ -17,7 +17,7 @@ function Signup() {
     setLoading(true);
     try {
       await axios.post(
-        "https://smartbridge-backend-pcfd.onrender.com/api/users/register",
+        "https://smartbridge-stock-app-backend.onrender.com/api/users/register",
         { name, email, password }
       );
       setSuccess(true);

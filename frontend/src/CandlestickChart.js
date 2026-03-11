@@ -30,7 +30,7 @@ function CandlestickChart({ symbol }) {
   useEffect(() => {
     const fetchCandles = async () => {
       const res = await axios.get(
-        `https://smartbridge-backend-pcfd.onrender.com/api/stocks/candles/${symbol}`,
+        `https://smartbridge-stock-app-backend.onrender.com/api/stocks/candles/${symbol}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }

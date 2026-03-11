@@ -16,7 +16,7 @@ function Dashboard() {
     const fetchData = async () => {
       try {
         const portfolioRes = await axios.get(
-          "https://smartbridge-backend-pcfd.onrender.com/api/portfolio",
+          "https://smartbridge-stock-app-backend.onrender.com/api/portfolio",
           { headers: { Authorization: `Bearer ${token}` } }
         );
 
@@ -38,7 +38,7 @@ function Dashboard() {
         setTotalInvested(invested);
 
         const userRes = await axios.get(
-          "https://smartbridge-backend-pcfd.onrender.com/api/users/me",
+          "https://smartbridge-stock-app-backend.onrender.com/api/users/me",
           { headers: { Authorization: `Bearer ${token}` } }
         );
 

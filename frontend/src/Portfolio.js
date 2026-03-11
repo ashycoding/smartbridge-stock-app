@@ -14,14 +14,14 @@ function Portfolio() {
     const fetchData = async () => {
       try {
         const profileRes = await axios.get(
-          "https://smartbridge-backend-pcfd.onrender.com/api/users/profile",
+          "https://smartbridge-stock-app-backend.onrender.com/api/users/profile",
           { headers: { Authorization: `Bearer ${token}` } }
         );
-        const stockRes = await axios.get("https://smartbridge-backend-pcfd.onrender.com/api/stocks", {
+        const stockRes = await axios.get("https://smartbridge-stock-app-backend.onrender.com/api/stocks", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const transactionRes = await axios.get(
-          "https://smartbridge-backend-pcfd.onrender.com/api/trade/history",
+          "https://smartbridge-stock-app-backend.onrender.com/api/trade/history",
           { headers: { Authorization: `Bearer ${token}` } }
         );
 
